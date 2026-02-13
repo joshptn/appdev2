@@ -1,6 +1,6 @@
 import {View, Text, Image, ScrollView, TextInput} from 'react-native';
 
-export default function HelloWorlDemo() {
+export default function HelloWorldDemo() {
   return (
     <ScrollView>
       <Text>Some text</Text>
