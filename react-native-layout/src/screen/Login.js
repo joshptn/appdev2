@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet 
-} from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 export default function Login() {
   return (
@@ -8,6 +7,8 @@ export default function Login() {
 
       {/* Header */}
       <View style={styles.header}>
+        <Image source={require('../../assets/login.png')} style={styles.logo} />
+        <Text style={styles.title}>Log In</Text>
       </View>
 
       {/* Body */}
@@ -30,8 +31,22 @@ const styles = StyleSheet.create({
 
     header: {
         flex: 1,
-        borderColor: 'black',
-        borderWidth: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: 50
+    },
+
+      title: {
+        fontSize: 40,
+        fontWeight: 700,
+        color: '#2b0b55'
+  },
+
+    logo: {
+        height: 150,
+        width: 150,
+        marginBottom: 30,
+        marginTop: 130
     },
 
     contentSection: {
