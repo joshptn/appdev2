@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function Login() {
+export default function Login({goToSignup}) {
   return (
     <View style={styles.container}>
 
@@ -22,7 +22,7 @@ export default function Login() {
             
             <View style={styles.inputContainer}>
                 <Ionicons name="lock-closed-outline" size={20} style={styles.icon} />
-                <TextInput placeholder="Password" style={styles.input} />
+                <TextInput placeholder="Password" secureTextEntry={true} style={styles.input} />
             </View>
         </View>
 
@@ -33,7 +33,7 @@ export default function Login() {
             </TouchableOpacity>
             <View style={styles.signup}>
                 <Text>Don't have an account? </Text>
-                <Text style={styles.link}>Sign up</Text>
+                <Text style={styles.link} onPress={ goToSignup }>Sign up</Text>
             </View>
         </View>
     </View>

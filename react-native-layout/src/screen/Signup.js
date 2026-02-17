@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function Signup() {
+export default function Signup({goToLogin}) {
   return (
     <View style={styles.container}>
 
@@ -42,7 +42,7 @@ export default function Signup() {
             </TouchableOpacity>
             <View style={styles.signup}>
                 <Text>Already have an account? </Text>
-                <Text style={styles.link}>Log in</Text>
+                <Text style={styles.link} onPress={goToLogin}>Log in</Text>
             </View>
         </View>
     </View>
