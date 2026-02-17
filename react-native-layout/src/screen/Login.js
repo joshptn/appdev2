@@ -28,7 +28,13 @@ export default function Login() {
 
         {/* Footer */}
         <View style={styles.footer}>
-
+            <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>Login</Text>
+            </TouchableOpacity>
+            <View style={styles.signup}>
+                <Text>Don't have an account? </Text>
+                <Text style={styles.link}>Sign up</Text>
+            </View>
         </View>
     </View>
   );
@@ -63,7 +69,8 @@ const styles = StyleSheet.create({
     body: {
         flex: 1.5,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop: 40
     },
 
     inputContainer: {
@@ -90,9 +97,34 @@ const styles = StyleSheet.create({
 
     footer: {
         flex: 1,
-        borderColor: 'black',
-        borderWidth: 5,
+        alignItems: 'center',
     },
+
+    buttonText: {
+        color: 'rgb(10, 3, 37)3',
+        fontWeight: 700
+  },
+
+    button: {
+        width: 200,
+        height: 50,
+        borderColor: '#19076b',
+        borderWidth: 2,
+        backgroundColor: '#79dbff',
+        borderRadius: 25,
+        justifyContent: 'center',
+        alignItems: 'center'
+  },
+
+    signup: {
+        flexDirection: 'row',
+        marginTop: 30
+  },
+  
+    link: {
+        color: "#2505b1",
+        fontWeight: 600
+  },
 
 
 });
